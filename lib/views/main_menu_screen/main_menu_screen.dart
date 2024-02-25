@@ -8,8 +8,8 @@ import 'package:steel_strategy/core/widgets/custom_button.dart';
 import 'package:steel_strategy/core/widgets/custom_chip.dart';
 import 'package:steel_strategy/views/finding_lobby_screen/finding_lobby_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class MainMenuScreen extends StatelessWidget {
+  const MainMenuScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
