@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:steel_strategy/core/assets/assets.dart';
-import 'package:steel_strategy/core/constants/enums.dart';
-import 'package:steel_strategy/core/local_db/local_db.dart';
-import 'package:steel_strategy/core/p2p_manager/p2p_manager.dart';
 import 'package:steel_strategy/core/widgets/bg_widget.dart';
 import 'package:steel_strategy/core/widgets/custom_button.dart';
 import 'package:steel_strategy/core/widgets/custom_chip.dart';
@@ -17,7 +14,7 @@ class MainMenuScreen extends StatelessWidget {
       child: SafeArea(
         child: Column(
           children: [
-            CustomChip(title: 'WELCOME BACK, ${LocalDB.userName ?? ""}'),
+            CustomChip(title: 'WELCOME BACK, '),
             Expanded(
               flex: 3,
               child: Center(
@@ -36,7 +33,7 @@ class MainMenuScreen extends StatelessWidget {
                         title: 'CREATE GAME!',
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const FindingDevicesScreen(
+                            builder: (context) => const FindingLobbyScreen(
                                 deviceType: DeviceType.advertiser),
                           ));
                         },
@@ -46,7 +43,7 @@ class MainMenuScreen extends StatelessWidget {
                         title: 'JOIN GAME!',
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const FindingDevicesScreen(
+                            builder: (context) => const FindingLobbyScreen(
                               deviceType: DeviceType.browser,
                             ),
                           ));
