@@ -21,9 +21,9 @@ class MainMenuScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(right: 32.0),
                   child: Image.asset(Assets.images.banner),
-                ),
-              ),
-            ),
+                ), // Padding
+              ), // Center
+            ), // Expanded
             Expanded(
               flex: 2,
               child: Center(
@@ -31,31 +31,15 @@ class MainMenuScreen extends StatelessWidget {
                   children: [
                     CustomButton(
                         title: 'CREATE GAME!',
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const FindingLobbyScreen(
-                                deviceType: DeviceType.advertiser),
-                          ));
-                        },
-                        buttonStyleType: ButtonStyleType.green),
+                        buttonStyleType: ButtonStyleType.blue),
                     const SizedBox(height: 24),
-                    CustomButton(
-                        title: 'JOIN GAME!',
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const FindingLobbyScreen(
-                              deviceType: DeviceType.browser,
-                            ),
-                          ));
-                        },
-                        buttonStyleType: ButtonStyleType.green)
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+                  ], // Children
+                ), // Column
+              ), // Center
+            ), // Epxanded
+          ], // Children
+        ), // Column
+      ), // Child SafeArea
+    ); // BackgroundWidget
+  } // build
+} // MainMenuScreen
