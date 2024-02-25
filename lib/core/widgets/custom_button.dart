@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nice_buttons/nice_buttons.dart';
-import 'package:steel_strategy/core/constants/enums.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
@@ -13,8 +12,8 @@ class CustomButton extends StatelessWidget {
       required this.buttonStyleType,
       required this.onTap});
 
-  bool get isButtonStyleTypeAsPurple =>
-      buttonStyleType == ButtonStyleType.purple;
+  bool get isButtonStyleTypeAsBlue =>
+      buttonStyleType == ButtonStyleType.blue;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +24,15 @@ class CustomButton extends StatelessWidget {
           color: Colors.white, borderRadius: BorderRadius.circular(32)),
       child: NiceButtons(
         gradientOrientation: GradientOrientation.Horizontal,
-        startColor: isButtonStyleTypeAsPurple
-            ? const Color(0xFFB85FFF)
-            : const Color(0xFFA6F208),
-        endColor: isButtonStyleTypeAsPurple
-            ? const Color(0xFFAB50F4)
-            : const Color(0xFF67EB00),
-        borderColor: isButtonStyleTypeAsPurple
-            ? const Color(0xFF9023E8)
-            : const Color(0xFF4EC307),
+        startColor: isButtonStyleTypeAsBlue
+            ? const Color(0xFF64ABFF)
+            : const Color(0xFF522C57),
+        endColor: isButtonStyleTypeAsBlue
+            ? const Color(0xFF64ABFF)
+            : const Color(0xFF522C57),
+        borderColor: isButtonStyleTypeAsBlue
+            ? const Color(0xFF64ABFF)
+            : const Color(0xFF522C57),
         borderRadius: 32,
         stretch: false,
         onTap: (finish) {
