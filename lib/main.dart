@@ -1,16 +1,21 @@
-import 'dart:async';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flame/game.dart';
-import 'package:flame/flame.dart';
-import 'package:steel_strategy/steel_strategy.dart';
+import 'views/splash_screen/splash_screen.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Flame.device.fullScreen();
-  await Flame.device.setLandscape();
+void main() {
+  runApp(const MyApp());
+}
 
-  SteelStrategy game = SteelStrategy();
-  runApp(GameWidget(game: kDebugMode ? SteelStrategy() : game));
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demp',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: ture,
+      ), // ThemeData
+    ); // MaterialApp
+  }
 }
