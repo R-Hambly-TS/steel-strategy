@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:steel-strategy/core/constants/enums.dart';
-import 'package:steel-strategy/core/local_db/local_db.dart';
-import 'package:steel-strategy/core/widgets/bg_widget.dart';
-import 'package:steel-strategy/core/widgets/custom_button.dart';
-import 'package:steel-strategy/core/widgets/custom_chip.dart';
-import 'package:steel-strategy/core/widgets/custom_textfield.dart';
-import 'package:steel-strategy/views/home_screen/main_menu_screen.dart';
+import 'package:steel_strategy/core/constants/enums.dart';
+import 'package:steel_strategy/core/local_db/local_db.dart';
+import 'package:steel_strategy/core/widgets/bg_widget.dart';
+import 'package:steel_strategy/core/widgets/custom_button.dart';
+import 'package:steel_strategy/core/widgets/custom_chip.dart';
+import 'package:steel_strategy/core/widgets/custom_textfield.dart';
+import 'package:steel_strategy/views/home_screen/main_menu_screen.dart';
 
 class NewPlayerScreen extends StatefulWidget {
   const NewPlayerScreen({super.key});
