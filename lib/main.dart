@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demp',
       theme: ThemeData(
+        fontFamily: 'sans-serif',
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: ture,
       ), // ThemeData
