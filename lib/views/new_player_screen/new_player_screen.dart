@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:steel_strategy/core/constants/enums.dart';
-import 'package:steel_strategy/core/local_db/local_db.dart';
 import 'package:steel_strategy/core/widgets/bg_widget.dart';
 import 'package:steel_strategy/core/widgets/custom_button.dart';
 import 'package:steel_strategy/core/widgets/custom_chip.dart';
@@ -15,7 +13,6 @@ class NewPlayerScreen extends StatefulWidget {
 }
 
 class _NewPlayerScreenState extends State<NewPlayerScreen> {
-  TextEditingController controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -41,33 +38,23 @@ class _NewPlayerScreenState extends State<NewPlayerScreen> {
                               ?.copyWith(color: Colors.white),
                         ),
                         const SizedBox(height: 10),
-                        CustomTextField(controller: controller,)
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
+                      ], // Children
+                    ), // Column
+                  ), // Padding
+                ), // SizedBox
+              ), // Center
+            ), // Expanded
             Expanded(
               flex: 2,
               child: Center(
                 child: CustomButton(
                     title: 'Continue',
-                    onTap: () {
-                      if(controller.text.trim().isNotEmpty) {
-                        LocalDB.setUserName(controller.text).then((_) {
-                          Navigator.of(context).pushReplacement(MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
-                          ));
-                        });
-                      }
-                    },
-                    buttonStyleType: ButtonStyleType.purple),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+                    buttonStyleType: ButtonStyleType.blue),
+              ), // Center
+            ), // Expanded
+          ], // Children
+        ), // Column
+      ), // SafeArea
+    ); // BackgroundWidget
+  } // build
+} // _NewPlayerScreenState
