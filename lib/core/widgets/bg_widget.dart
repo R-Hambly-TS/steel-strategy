@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:steel-strategy/core/constants/customcolors.dart';
+import 'package:steel_strategy/core/constants/customcolors.dart';
 
 class BackgroundWidget extends StatelessWidget {
   final Widget child;
-  
+
   const BackgroundWidget({super.key, required this.child});
 
   @override
@@ -12,9 +12,8 @@ class BackgroundWidget extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: BoxDecoration(
-          gradient: CustomColors.bgGradient),
-          child: child,
+        decoration: BoxDecoration(gradient: CustomColors.bgGradient),
+        child: child,
       ), // Container
     ); // Scaffold
   }

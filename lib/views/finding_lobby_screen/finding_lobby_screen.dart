@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:steel_strategy/core/widgets/bg_widget.dart';
-import 'package:steel_strategy/core/widgets/custom_button.dart';
 import 'package:steel_strategy/core/widgets/custom_chip.dart';
 import 'package:steel_strategy/views/steel_strategy_screen/steel_strategy_screen.dart';
 
@@ -18,8 +17,7 @@ class _FindingLobbyScreenState extends State<FindingLobbyScreen> {
       child: SafeArea(
         child: Column(
           children: [
-            CustomChip(
-                title: 'SCANNING...'),
+            CustomChip(title: 'SCANNING...'),
             Expanded(
               flex: 4,
               child: Center(),
@@ -27,10 +25,16 @@ class _FindingLobbyScreenState extends State<FindingLobbyScreen> {
             Expanded(
               flex: 2,
               child: Center(
-                child: CustomButton(
-                    title: 'START GAME',
-                      buttonStyleType: ButtonStyleType.blue
-                ), // CustomButton
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => FindingLobbyScreen()),
+                    );
+                  },
+                  child: Text('Start'),
+                ),
               ), // Center
             ), // Expanded
           ], // Children

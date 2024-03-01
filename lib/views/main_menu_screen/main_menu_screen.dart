@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:steel_strategy/core/assets/assets.dart';
+import 'package:steel_strategy/core/assets/images.dart';
 import 'package:steel_strategy/core/widgets/bg_widget.dart';
-import 'package:steel_strategy/core/widgets/custom_button.dart';
 import 'package:steel_strategy/core/widgets/custom_chip.dart';
 import 'package:steel_strategy/views/finding_lobby_screen/finding_lobby_screen.dart';
 
@@ -20,7 +20,7 @@ class MainMenuScreen extends StatelessWidget {
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.only(right: 32.0),
-                  child: Image.asset(Assets.images.banner),
+                  child: Image.asset(Images.banner),
                 ), // Padding
               ), // Center
             ), // Expanded
@@ -29,10 +29,18 @@ class MainMenuScreen extends StatelessWidget {
               child: Center(
                 child: Column(
                   children: [
-                    CustomButton(
-                        title: 'CREATE GAME!',
-                        buttonStyleType: ButtonStyleType.blue),
-                    const SizedBox(height: 24),
+                    Center(
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FindingLobbyScreen()),
+                          );
+                        },
+                        child: Text('Find a Lobby'),
+                      ),
+                    ),
                   ], // Children
                 ), // Column
               ), // Center

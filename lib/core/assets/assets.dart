@@ -1,5 +1,5 @@
 import 'images.dart';
 
 class Assets {
-  final Images iamges = Images();
+  final Images images = Images();
 }
